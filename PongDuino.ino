@@ -52,7 +52,7 @@ const static unsigned char ball_bits[] U8X8_PROGMEM = {
   0x18, 0x5a, 0x24, 0xdb, 0xdb, 0x24, 0x5a, 0x18
 };
 
-void setup(void) {
+void setup() {
 pinMode(A3,INPUT);
 pinMode(13,OUTPUT);
 oled.begin();
@@ -169,7 +169,7 @@ delay(1000);
 resetGame();
 }
 
-void loop(void) {
+void loop() {
 oled.clearBuffer();
 // Players joystick input
 int VRX = (analogRead(A1) - 512) / 150;
